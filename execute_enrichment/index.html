@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Execute the Enrichment &mdash; Inria Tranque Enrichment  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How to start Enrichment in Tranque" href="../how_start_enrichment_tranque/index.html" />
+    <link rel="prev" title="Generate the tgz file of Emac" href="../generate_tgz_file_emac/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Inria Tranque Enrichment
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../generate_tgz_file_ef/index.html">Generate the tgz file of EF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../definition_of_ecourse/index.html">Definition of ecourse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generate_tgz_file_ecourse/index.html">Generate the tgz file of Ecourse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generate_tgz_file_emac/index.html">Generate the tgz file of Emac</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Execute the Enrichment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#clone-enrichment-and-prepare-the-docker-container">Clone enrichment and prepare the docker container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setup-of-the-enrichment-with-ef-emac-and-ecourse">Setup of the enrichment with EF, EMAC and Ecourse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-the-case-0-ecourse">Run the case 0: ecourse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-the-cases-1-and-5-emac">Run the cases 1 and 5: EMAC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-the-cases-2-3-and-4-ef">Run the cases 2, 3 and 4: EF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../how_start_enrichment_tranque/index.html">How to start Enrichment in Tranque</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../add_new_parameter_ecourse/index.html">Add a new parameter to Ecourse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../add_tests_into_ecourse/index.html">Add tests into Ecourse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">References</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Inria Tranque Enrichment</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Execute the Enrichment</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/execute_enrichment/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="execute-the-enrichment">
+<h1>Execute the Enrichment<a class="headerlink" href="#execute-the-enrichment" title="Permalink to this headline">¶</a></h1>
+<p>From this page you can learn how to execute the enrichment project</p>
+<div class="section" id="clone-enrichment-and-prepare-the-docker-container">
+<h2>Clone enrichment and prepare the docker container<a class="headerlink" href="#clone-enrichment-and-prepare-the-docker-container" title="Permalink to this headline">¶</a></h2>
+<p>First, clone the git repository of “Enrichment” and run the following steps:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ cd Inria-Chile/tranque
+$ git clone git@gitlab.com:Inria-Chile/tranque/enrichment.git
+$ cd enrichment
+$ docker stop $(docker ps -q)
+$ docker image prune
+WARNING! This will remove all dangling images.
+Are you sure you want to continue? [y/N] y
+$ docker volume prune
+WARNING! This will remove all local volumes not used by at least one container.
+Are you sure you want to continue? [y/N] y
+$ docker system prune
+WARNING! This will remove:
+- all stopped containers
+- all networks not used by at least one container
+- all dangling images
+- all dangling build cache
+Are you sure you want to continue? [y/N] y
+</pre></div>
+</div>
+<p>These steps permit to have a clear environment for the next executions of tests.</p>
+</div>
+<div class="section" id="setup-of-the-enrichment-with-ef-emac-and-ecourse">
+<h2>Setup of the enrichment with EF, EMAC and Ecourse<a class="headerlink" href="#setup-of-the-enrichment-with-ef-emac-and-ecourse" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ cd testcases
+$ ./build.sh path/to/ef.tgz path/to/emac.tgz path/to/ecourse.tgz
+$ git clone git@gitlab.com:Inria-Chile/tranque/index-test-cases.git
+$ cd index-test-cases
+</pre></div>
+</div>
+</div>
+<div class="section" id="run-the-case-0-ecourse">
+<h2>Run the case 0: ecourse<a class="headerlink" href="#run-the-case-0-ecourse" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$  docker-compose exec django ./cases/legacy/case-0/run.sh
+</pre></div>
+</div>
+<img alt="../_images/kibana0.png" src="../_images/kibana0.png" />
+</div>
+<div class="section" id="run-the-cases-1-and-5-emac">
+<h2>Run the cases 1 and 5: EMAC<a class="headerlink" href="#run-the-cases-1-and-5-emac" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ docker-compose exec django ./cases/legacy/case-1/run.sh
+$ docker-compose exec django ./cases/legacy/case-5/run.sh
+</pre></div>
+</div>
+<img alt="../_images/kibana1.png" src="../_images/kibana1.png" />
+<img alt="../_images/kibana5.png" src="../_images/kibana5.png" />
+</div>
+<div class="section" id="run-the-cases-2-3-and-4-ef">
+<h2>Run the cases 2, 3 and 4: EF<a class="headerlink" href="#run-the-cases-2-3-and-4-ef" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ docker-compose exec django ./run-case-2.sh
+$ docker-compose exec django ./run-case-3.sh
+$ docker-compose exec django ./run-case-4.sh
+</pre></div>
+</div>
+<img alt="../_images/kibana2.png" src="../_images/kibana2.png" />
+<img alt="../_images/kibana3.png" src="../_images/kibana3.png" />
+<img alt="../_images/kibana4.png" src="../_images/kibana4.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../how_start_enrichment_tranque/index.html" class="btn btn-neutral float-right" title="How to start Enrichment in Tranque" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../generate_tgz_file_emac/index.html" class="btn btn-neutral float-left" title="Generate the tgz file of Emac" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, INRIA Chile
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
